@@ -1,0 +1,260 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333;
+    background: linear-gradient(135deg, #f0f4f8, #c9d6e5);
+    background-attachment: fixed;
+    background-size: 200% 200%;
+    animation: gradientScroll 15s ease infinite;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 60px;
+    background: linear-gradient(135deg, #4e54c8, #8f94fb);
+    color: #fff;
+    border-bottom: 5px solid #2a2d34;
+    position: relative;
+    transition: background 0.5s ease;
+}
+
+header:hover {
+    background: linear-gradient(135deg, #434b6c, #9c10d4);
+}
+
+header h1 {
+    font-size: 3.5em;
+    margin: 0;
+    animation: fadeIn 2s ease-in-out;
+}
+
+header p {
+    font-size: 1.5em;
+    margin: 10px 0;
+    animation: fadeIn 2s ease-in-out 0.5s;
+}
+
+header img {
+    border-radius: 50%;
+    width: 180px;
+    height: 180px;
+    border: 5px solid #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    animation: zoomIn 2s ease-in-out;
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #2a2d34;
+    margin: 0;
+    border-top: 2px solid #fff;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+nav a:hover, nav a.active {
+    background-color: #4e54c8;
+    color: #fff;
+    transform: scale(1.1);
+}
+
+/* Sections */
+section {
+    padding: 60px 30px;
+    margin: 20px auto;
+    max-width: 1200px;
+    background: #ffffff; /* Solid white background */
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0;
+    position: relative;
+    transition: background 0.5s ease, opacity 0.5s ease;
+    background-clip: padding-box; /* Ensure the gradient effect only applies to the content area */
+}
+
+section:nth-of-type(odd) {
+    background: #f7f9fc; /* Light grayish blue background for odd sections */
+}
+
+section:nth-of-type(even) {
+    background: #ffffff; /* White background for even sections */
+}
+
+section:hover {
+    background: linear-gradient(135deg, #f3f6f9, #ffffff);
+}
+
+section:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, #4e54c8, #8f94fb);
+    border-radius: 5px 5px 0 0;
+}
+
+section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #4e54c8;
+    text-align: center;
+}
+
+/* Projects */
+.project {
+    margin: 30px 0;
+    text-align: center;
+    animation: slideUp 1s ease-out;
+    background: #ffffff; /* White background for project items */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.project img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Contact Form */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: auto;
+    background: #ffffff; /* Solid white background */
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background 0.5s ease, opacity 0.5s ease;
+}
+
+form:hover {
+    background: linear-gradient(135deg, #f3f6f9, #ffffff);
+}
+
+form label {
+    margin: 15px 0 5px;
+    font-weight: bold;
+}
+
+form input, form textarea {
+    padding: 12px;
+    margin: 5px 0 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input:focus, form textarea:focus {
+    border-color: #4e54c8;
+    box-shadow: 0 0 5px rgba(78, 84, 200, 0.3);
+    outline: none;
+}
+
+form button {
+    padding: 15px;
+    background-color: #4e54c8;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+form button:hover {
+    background-color: #8f94fb;
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .project img {
+        max-width: 100%;
+    }
+
+    section {
+        padding: 40px 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    nav a {
+        padding: 10px 15px;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.9); }
+    to { transform: scale(1); }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes gradientScroll {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 100% 100%; }
+}
+
+/* Fading Effect on Scroll */
+.fade-on-scroll {
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+.fade-on-scroll.invisible {
+    opacity: 0;
+}

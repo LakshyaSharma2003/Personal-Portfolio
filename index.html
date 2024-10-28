@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lakshya Sharma's Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <h1>Lakshya Sharma</h1>
+    <p>Welcome to my personal portfolio!</p>
+    <img src="Lakshya Sharma.jpg" alt="Lakshya Sharma">
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#resume">Resume</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Education: B.tech Computer Science Engineering</p>
+    <p>Minor in AI from IIT Ropar</p>
+    <p>Work Experience: Web Development and Java Developer Intern </p>
+    <p>Hobbies: Guitar, Polo, Swimming, Rifle Shooting</p>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project">
+      <img src="Project 1.webp" alt="Project 1">
+      <h3>Real Time Sign Language Recognition System</h3>
+      <p>This project is designed to recognize Indian Sign Language (ISL) gestures in real-time using a webcam. The system utilizes machine learning models for hand gesture recognition and provides real-time translation of gestures into English, Hindi, and Tamil. Additionally, it features text-to-speech functionality to vocalize the recognized gestures.</p>
+    </div>
+    <!-- Repeat for more projects -->
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form id="contact-form">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      <label for="subject">Subject:</label>
+      <input type="text" id="subject" name="subject" required>
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <!-- Resume Section -->
+  <section id="resume">
+    <h2>Resume</h2>
+    <a href="resume.pdf" target="_blank">Download my resume</a>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
